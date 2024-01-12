@@ -8,6 +8,7 @@ import (
 	"os"
 	"strings"
 
+	generate "github.com/koutarn/go-passwordgen/pkg"
 	"github.com/spf13/cobra"
 )
 
@@ -49,7 +50,7 @@ var rootCmd = &cobra.Command{
 			return			
 		}
 
-		password, err := GeneratePassword(passwordLength, charset)
+		password, err := generate.GeneratePassword(passwordLength, charset)
 		if err != nil {
 			fmt.Println("Error generating password:", err)
 			return
