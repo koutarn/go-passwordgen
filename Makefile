@@ -7,7 +7,7 @@ all: build
 
 # アプリケーションビルド
 build:
-	go build -o ./bin/$(APP_NAME) .
+	go build -o ./bin/$(APP_NAME).exe .
 
 # アプリケーションの実行
 run:
